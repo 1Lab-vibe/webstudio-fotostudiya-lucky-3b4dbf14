@@ -1,2 +1,3 @@
-# webstudio-fotostudiya-lucky-3b4dbf14
-Web Studio landing for Фотостудия Lucky
+# Welcome to your Lovable project
+
+TODO: Document your project here
