@@ -58,10 +58,6 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      fontFamily: {
-        display: ["'Playfair Display'", "Georgia", "serif"],
-        sans: ["Manrope", "system-ui", "sans-serif"],
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
