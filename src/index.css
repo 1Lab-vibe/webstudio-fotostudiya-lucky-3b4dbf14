@@ -4,66 +4,71 @@
 
 @layer base {
   :root {
-    --background: 36 33% 97%;
-    --foreground: 24 20% 12%;
+    --background: 36 30% 97%;
+    --foreground: 25 25% 12%;
 
     --card: 36 30% 99%;
-    --card-foreground: 24 20% 12%;
+    --card-foreground: 25 25% 12%;
 
     --popover: 36 30% 99%;
-    --popover-foreground: 24 20% 12%;
+    --popover-foreground: 25 25% 12%;
 
-    --primary: 18 60% 42%;
-    --primary-foreground: 36 33% 97%;
-    --primary-glow: 28 80% 60%;
+    --primary: 22 55% 35%;
+    --primary-foreground: 36 40% 98%;
+    --primary-glow: 28 70% 55%;
 
-    --secondary: 32 25% 92%;
-    --secondary-foreground: 24 20% 12%;
+    --secondary: 35 25% 92%;
+    --secondary-foreground: 25 25% 18%;
 
-    --muted: 32 20% 94%;
-    --muted-foreground: 24 10% 40%;
+    --muted: 35 20% 94%;
+    --muted-foreground: 25 10% 42%;
 
     --accent: 28 70% 55%;
-    --accent-foreground: 36 33% 97%;
+    --accent-foreground: 25 25% 12%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 36 33% 97%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 30 20% 88%;
     --input: 30 20% 88%;
-    --ring: 18 60% 42%;
+    --ring: 22 55% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --gradient-warm: linear-gradient(135deg, hsl(18 60% 42%), hsl(28 80% 60%));
-    --gradient-overlay: linear-gradient(180deg, hsl(24 30% 8% / 0.1) 0%, hsl(24 30% 8% / 0.75) 100%);
-    --shadow-soft: 0 10px 40px -15px hsl(18 60% 42% / 0.25);
-    --shadow-card: 0 4px 20px -8px hsl(24 20% 12% / 0.12);
+    --gradient-warm: linear-gradient(135deg, hsl(28 70% 55% / 0.15), hsl(22 55% 35% / 0.05));
+    --gradient-hero: linear-gradient(180deg, hsl(25 25% 8% / 0.1) 0%, hsl(25 25% 8% / 0.75) 100%);
+    --shadow-soft: 0 20px 60px -20px hsl(22 55% 25% / 0.25);
+    --shadow-card: 0 8px 30px -10px hsl(22 30% 30% / 0.15);
 
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Manrope', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 25 25% 8%;
+    --foreground: 36 30% 95%;
+    --card: 25 25% 10%;
+    --card-foreground: 36 30% 95%;
+    --primary: 28 70% 55%;
+    --primary-foreground: 25 25% 8%;
+    --border: 25 15% 20%;
   }
 }
 
 @layer base {
   * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    font-feature-settings: "ss01", "cv11";
+    font-feature-settings: "ss01", "cv01";
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
 }
 
 @layer utilities {
-  .text-gradient-warm {
-    background: var(--gradient-warm);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .bg-gradient-warm { background: var(--gradient-warm); }
-  .bg-overlay { background: var(--gradient-overlay); }
+  .text-balance { text-wrap: balance; }
+  .gradient-warm { background: var(--gradient-warm); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-card { box-shadow: var(--shadow-card); }
 }
